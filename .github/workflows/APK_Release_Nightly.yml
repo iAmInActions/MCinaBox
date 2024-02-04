@@ -1,13 +1,8 @@
 name: APK Release Nightly Build
 on:
-  workflow_dispatch:
-    inputs:
-      Reason:
-        description: 'Reasons for temporary build'     
-        required: true
-        default: 'No reason.Just do it.'
-  schedule:
-    - cron: '0 16 * * *'
+  push:
+    branches:
+      - main
     
 # 北京时间0点开始构建,环境时间也重置成北京时间了哦 PS:<del>抱歉了世界各国朋友们</del>(这里标签没用...)
 # 0:00 Beijing time (zone)
